@@ -31,7 +31,7 @@ def merge(left_lst, right_lst):
     return merged
 small_arr = [5, 3, 8, 4, 2]
 average_arr = [7, 12, 3, 5, 8, 11, 20, 1, 6, 14]
-big_arr = [random.randint(1, 1000) for _ in range(10000)]
+big_arr = [random.randint(1, 100000) for _ in range(1000000)]
 
 small_sorted_arr = merge_sort(small_arr)
 average_sorted_arr = merge_sort(average_arr)
@@ -42,9 +42,9 @@ print(small_sorted_arr)
 print(average_sorted_arr)
 # print(big_sorted_arr)
 
-time_taken_small = timeit.timeit(lambda: merge_sort(small_arr), number=1000)
-time_taken_average = timeit.timeit(lambda: merge_sort(average_arr), number=1000)
-time_taken_big = timeit.timeit(lambda: merge_sort(big_arr), number=1000)
+time_taken_small = timeit.timeit(lambda: merge_sort(small_arr), number=1)
+time_taken_average = timeit.timeit(lambda: merge_sort(average_arr), number=1)
+time_taken_big = timeit.timeit(lambda: merge_sort(big_arr), number=1)
 
 print(f"Time taken: {time_taken_small} seconds")
 print(f"Time taken: {time_taken_average} seconds")
